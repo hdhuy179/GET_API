@@ -24,7 +24,6 @@ final class RepoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configView()
     }
     
@@ -36,17 +35,17 @@ final class RepoViewController: UIViewController {
     }
     
     private func getAPIData() {
-        
         let urlPath = "https://api.github.com/users/google/repos"
         guard let url: URL = URL(string: urlPath) else {
             print("Error: cannot create URL")
             return
         }
         let urlRequest = URLRequest(url: url)
-        let config = URLSessionConfiguration.default
-        let session = URLSession(configuration: config)
-        
+//        let config = URLSessionConfiguration.default
+//        let session = URLSession(configuration: config)
+        let session = URLSession.shared
         let task = session.dataTask(with: urlRequest) { (data, response, error) in
+            print("Task Completed")
             guard error == nil else {
                 print(error!.localizedDescription)
                 return
@@ -55,16 +54,13 @@ final class RepoViewController: UIViewController {
                 print("Error: did not receive data")
                 return
             }
-            do {
-                let jsonResult = try JSONSerialization.jsonObject(with: responseData, options: JSONSerialization.ReadingOptions()) as! Array<Any>
-                
-                for json in jsonResult {
-                    if let item = json as? [String: AnyObject],
-                        let repo = Repo(JSON: item) {
-                        self.repos.append(repo)
-                    }
-                }
-            } catch {
+            guard let jsonResult = try? JSONDecoder().decode([Repo].self, from: responseData) else {
+                print("Error: error trying to convert data to json")
+                return
+            }
+            DispatchQueue.main.async {
+                self.repos = jsonResult
+                self.tableView.reloadData()
             }
         }
         task.resume()

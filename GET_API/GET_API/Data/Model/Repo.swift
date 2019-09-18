@@ -6,33 +6,30 @@
 //  Copyright © 2019 Hoang Dinh Huy. All rights reserved.
 //
 
-import ObjectMapper
+//import ObjectMapper
 
-struct Repo {
+struct Repo: Decodable {
     var id = 0
-    var fullname = ""
-    var avatarURLString = ""
-    var ownerName = ""
-    var urlString = ""
-    var stargazersCount = 0
-    var forksCount = 0
+    var full_name = ""
+    var owner: Owner = Owner()
+    var html_url = ""
+    var stargazers_count = 0
+    var forks_count = 0
     var watchers = 0
 }
 
-extension Repo: Mappable {
-    init?(map: Map) {
-    }
-    
-    mutating func mapping(map: Map) {
-        id <- map["id"]
-        fullname <- map["full_name"]
-        avatarURLString <- map["owner.avatar_url"]
-        ownerName <- map["owner.login"]
-        urlString <- map["html_url"]
-        stargazersCount <- map["stargazers_count"]
-        forksCount <- map["forks_count"]
-        watchers <- map["watchers"]
-    }
-    
-    
-}
+//extension Repo: Mappable {
+//    init?(map: Map) {
+//    }
+//
+//    mutating func mapping(map: Map) {
+//        id <- map["id"]
+//        full_name <- map["full_name"]
+//        html_url <- map["html_url"]
+//        stargazers_count <- map["stargazers_count"]
+//        forks_count <- map["forks_count"]
+//        watchers <- map["watchers"]
+//    }
+//
+//
+//}

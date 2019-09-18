@@ -15,8 +15,8 @@ final class RepoTableViewCell: UITableViewCell {
     
     func blind(repo: Repo) {
         backgroundColor = .lightGray
-        RepoNameLabel.text = repo.fullname
-        RepoOwnerLabel.text = repo.ownerName
+        RepoNameLabel.text = repo.full_name
+        RepoOwnerLabel.text = repo.owner.login
     }
     
     
