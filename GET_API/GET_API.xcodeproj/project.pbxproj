@@ -8,7 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		38383A15AFFA652BA0AE45A3 /* Pods_GET_API.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90552D44D66BA1527BCFA01 /* Pods_GET_API.framework */; };
+		F70FB81F2334B0F30012C80E /* CustomRequestAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70FB81E2334B0F30012C80E /* CustomRequestAdapter.swift */; };
 		F73F2E5923321D8000A86E01 /* Owner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F73F2E5823321D8000A86E01 /* Owner.swift */; };
+		F76A00FC23351855000897AC /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F76A00FB23351855000897AC /* BaseRequest.swift */; };
+		F77F55B6233377F2001BF657 /* APIUrls.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77F55B5233377F2001BF657 /* APIUrls.swift */; };
+		F77F55B823337855001BF657 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F77F55B723337855001BF657 /* APIService.swift */; };
 		F7ABBDE9232CCCA4007E40A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABBDE8232CCCA4007E40A2 /* AppDelegate.swift */; };
 		F7ABBDEB232CCCA4007E40A2 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABBDEA232CCCA4007E40A2 /* MainViewController.swift */; };
 		F7ABBDEE232CCCA4007E40A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7ABBDEC232CCCA4007E40A2 /* Main.storyboard */; };
@@ -20,13 +24,18 @@
 		F7ABBE06232CD01C007E40A2 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F7ABBE04232CD01C007E40A2 /* RepoTableViewCell.xib */; };
 		F7ABBE0B232CD69F007E40A2 /* UIStoryBoard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABBE0A232CD69F007E40A2 /* UIStoryBoard+.swift */; };
 		F7ABBE0F232CE9D9007E40A2 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ABBE0E232CE9D9007E40A2 /* Repo.swift */; };
+		F7ED14C123360036002C214B /* BaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7ED14C023360036002C214B /* BaseError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		650AE7FE8CE546069BA3B3A5 /* Pods-GET_API.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GET_API.release.xcconfig"; path = "Target Support Files/Pods-GET_API/Pods-GET_API.release.xcconfig"; sourceTree = "<group>"; };
 		A5FAFB716386E4BF5A3583D9 /* Pods-GET_API.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GET_API.debug.xcconfig"; path = "Target Support Files/Pods-GET_API/Pods-GET_API.debug.xcconfig"; sourceTree = "<group>"; };
 		B90552D44D66BA1527BCFA01 /* Pods_GET_API.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GET_API.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F70FB81E2334B0F30012C80E /* CustomRequestAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomRequestAdapter.swift; sourceTree = "<group>"; };
 		F73F2E5823321D8000A86E01 /* Owner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Owner.swift; sourceTree = "<group>"; };
+		F76A00FB23351855000897AC /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		F77F55B5233377F2001BF657 /* APIUrls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUrls.swift; sourceTree = "<group>"; };
+		F77F55B723337855001BF657 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		F7ABBDE5232CCCA4007E40A2 /* GET_API.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GET_API.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7ABBDE8232CCCA4007E40A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7ABBDEA232CCCA4007E40A2 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -40,6 +49,7 @@
 		F7ABBE04232CD01C007E40A2 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
 		F7ABBE0A232CD69F007E40A2 /* UIStoryBoard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryBoard+.swift"; sourceTree = "<group>"; };
 		F7ABBE0E232CE9D9007E40A2 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		F7ED14C023360036002C214B /* BaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +79,50 @@
 				650AE7FE8CE546069BA3B3A5 /* Pods-GET_API.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F70FB81D2334B0C30012C80E /* Middleware */ = {
+			isa = PBXGroup;
+			children = (
+				F70FB81E2334B0F30012C80E /* CustomRequestAdapter.swift */,
+			);
+			path = Middleware;
+			sourceTree = "<group>";
+		};
+		F768CF4C2335FEE30046D91F /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				F7ED14C023360036002C214B /* BaseError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		F76A00FA23351841000897AC /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				F76A00FB23351855000897AC /* BaseRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		F77F55B323336B1F001BF657 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F77F55B4233377BA001BF657 /* API */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F77F55B4233377BA001BF657 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				F77F55B5233377F2001BF657 /* APIUrls.swift */,
+				F77F55B723337855001BF657 /* APIService.swift */,
+				F76A00FA23351841000897AC /* Request */,
+				F768CF4C2335FEE30046D91F /* Error */,
+				F70FB81D2334B0C30012C80E /* Middleware */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 		F7ABBDDC232CCCA4007E40A2 = {
@@ -159,6 +213,7 @@
 		F7ABBE0C232CE76C007E40A2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				F77F55B323336B1F001BF657 /* Source */,
 				F7ABBE0D232CE779007E40A2 /* Model */,
 			);
 			path = Data;
@@ -290,12 +345,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F77F55B6233377F2001BF657 /* APIUrls.swift in Sources */,
 				F7ABBDEB232CCCA4007E40A2 /* MainViewController.swift in Sources */,
 				F7ABBDE9232CCCA4007E40A2 /* AppDelegate.swift in Sources */,
 				F73F2E5923321D8000A86E01 /* Owner.swift in Sources */,
 				F7ABBDFF232CCF92007E40A2 /* RepoViewController.swift in Sources */,
 				F7ABBE0F232CE9D9007E40A2 /* Repo.swift in Sources */,
+				F76A00FC23351855000897AC /* BaseRequest.swift in Sources */,
+				F7ED14C123360036002C214B /* BaseError.swift in Sources */,
 				F7ABBE0B232CD69F007E40A2 /* UIStoryBoard+.swift in Sources */,
+				F70FB81F2334B0F30012C80E /* CustomRequestAdapter.swift in Sources */,
+				F77F55B823337855001BF657 /* APIService.swift in Sources */,
 				F7ABBE05232CD01C007E40A2 /* RepoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

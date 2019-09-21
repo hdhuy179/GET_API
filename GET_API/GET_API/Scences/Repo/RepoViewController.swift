@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 final class RepoViewController: UIViewController {
 
@@ -34,36 +35,22 @@ final class RepoViewController: UIViewController {
         tableView.register(UINib(nibName: "RepoTableViewCell", bundle: nil), forCellReuseIdentifier: cellID)
     }
     
+    
     private func getAPIData() {
-        let urlPath = "https://api.github.com/users/google/repos"
-        guard let url: URL = URL(string: urlPath) else {
-            print("Error: cannot create URL")
-            return
-        }
-        let urlRequest = URLRequest(url: url)
-//        let config = URLSessionConfiguration.default
-//        let session = URLSession(configuration: config)
-        let session = URLSession.shared
-        let task = session.dataTask(with: urlRequest) { (data, response, error) in
-            print("Task Completed")
-            guard error == nil else {
-                print(error!.localizedDescription)
-                return
-            }
-            guard let responseData = data else {
-                print("Error: did not receive data")
-                return
-            }
-            guard let jsonResult = try? JSONDecoder().decode([Repo].self, from: responseData) else {
-                print("Error: error trying to convert data to json")
-                return
-            }
-            DispatchQueue.main.async {
-                self.repos = jsonResult
+        let request = BaseRequest(url: Urls.getGoogleRepoList)
+        
+        APIService.shared.request(input: request) { (values, error) in
+            if let error = error {
+                print(error)
+            } else if let values = values {
+                for value in values {
+                    if let repo = Repo(JSON: value) {
+                        self.repos.append(repo)
+                    }
+                }
                 self.tableView.reloadData()
             }
         }
-        task.resume()
     }
 }
 

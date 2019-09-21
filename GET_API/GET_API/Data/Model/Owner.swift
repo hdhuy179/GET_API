@@ -6,7 +6,7 @@
 //  Copyright © 2019 Hoang Dinh Huy. All rights reserved.
 //
 
-struct Owner: Decodable {
-    var avatar_url = ""
-    var login = ""
-}
+//struct Owner: Decodable {
+//    var avatar_url = ""
+//    var login = ""
+//}
